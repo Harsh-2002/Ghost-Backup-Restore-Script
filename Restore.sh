@@ -64,8 +64,9 @@ if [ -n "$LATEST_CONTENT_BACKUP" ]; then
             sudo chown ghost:bitnami "$SOURCE_DIR$folder"
         done
 
-        echo "Ownership and permissions set for specific folders and Starting Ghost."
-          sudo /opt/bitnami/ctlscript.sh start ghost
+        echo "Ownership and permissions set for specific folders and Restarting Services."
+          sudo /opt/bitnami/ctlscript.sh restart
+          sudo /opt/bitnami/ctlscript.sh status
     else
         echo "Error: Directory download failed."
     fi
