@@ -1,0 +1,1 @@
+sudo sed -i '371s/^/    RequestHeader set X-Forwarded-Proto "https"\n/' /opt/bitnami/apache2/conf/httpd.conf
